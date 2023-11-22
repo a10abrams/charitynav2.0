@@ -215,7 +215,7 @@ h1 {
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 4;
-    background-image: url("morocco_earthquake_rubble.jpg");
+    /* background-image: url("morocco_earthquake_rubble.jpg"); */
     background-size: cover;
 }
 

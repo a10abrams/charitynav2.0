@@ -1,280 +1,351 @@
 export default function Home() {
     return (
     <>
-    <div id="homepg_top_banner">
-        <p id="banner_msg">Support <a href="#" id="banner_link">insert cause here.</a></p>
+<div id="homepg_top_banner">
+    <p id="banner_msg">
+      Support{" "}
+      <a href="#" id="banner_link">
+        [insert cause here].
+      </a>
+    </p>
+  </div>
+  <nav id="nav_bar">
+    <div className="nav_link" id="index_logo">
+      <a href="ggxcn_home.html">
+        <img src="the_index_logo.jpg" alt="Nonprofit Index home" id="logo" />
+      </a>
     </div>
-    <nav id="nav_bar">
-        <div className="nav_link" id="index_logo">
-            <a href="ggxcn_home.html">
-                <img src="the_index_logo.jpg" alt="Nonprofit Index home" id="logo">
+    <ul id="nav_list_container">
+      <li className="nav_link">
+        <a href="about.html">About</a>
+      </li>
+      <li className="nav_link">
+        <a href="nonprofits.html">Nonprofits</a>
+      </li>
+      <li className="nav_link" id="search">
+        <input type="search" id="search_bar" />
+        <button type="submit" id="search_button">
+          <span className="material-symbols-outlined">search</span>
+        </button>
+      </li>
+      <li className="nav_link">
+        <a href="signup.html">Sign up</a>
+      </li>
+      <li className="nav_link">
+        <a href="login.html">Log in</a>
+      </li>
+    </ul>
+  </nav>
+  <div className="container">
+    <img src="clay-banks-Pcg6X4QG63M-unsplash.jpg" id="site_img" />
+    {/*onhover make attribute + link to cause in pic*/}
+    <div className="container2" id="site_opener">
+      <h1>The News Trend-Based Nonprofit Index</h1>
+      <p id="opener_msg">
+        With the power of GlobalGiving and Charity Navigator, The News
+        Trend-Based Nonprofit Index empowers the informed.
+      </p>
+      {/*this could link to the sign up page?*/}
+      <div id="join_cta">
+        <input
+          type="text"
+          id="join_cta_email"
+          placeholder="Email@example.com"
+        />
+        <button type="submit" id="join_cta_button">
+          Get involved!
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="modus_o">
+    <p id="modus_txt">
+      Empowering causes isn't just a wish; it's a choice we make. If you're
+      uncertain about where to begin, start here! Dive into the heart of current
+      events and discover the humans making a difference. Your click can be the
+      catalyst for change –{" "}
+      <a href="#" id="search_inline">
+        how will you respond?
+      </a>
+    </p>
+  </div>
+  <div id="trending_opener">
+    <div id="trending_opener_title">Spotlight</div>
+    <p id="trending_opener_cap">
+      Nonprofits that cure the
+      I-want-to-do-something-about-this-rather-than-just-read-about-it feeling.
+    </p>
+  </div>
+  <div id="trending_nps_grid_container">
+    {/*there should be a couple of these; write the rest using js*/}
+    <div id="trending_nps_container">
+      <div className="trending_np">
+        {/*maybe make img a?*/}
+        <a className="trending_np_pic" href="#" />
+        <div className="trending_np_info">
+          <span className="trending_np_info_cat">
+            <a href="#" className="trending_np_info_cat_link">
+              Disaster Response
             </a>
-        </div>
-        <ul id="nav_list_container">
-            <li className="nav_link">
-                <a href="about.html">
-                    About
-                </a>
-            </li>
-            <li className="nav_link">
-                <a href="nonprofits.html">
-                    Nonprofits
-                </a>
-            </li>
-            <li className="nav_link" id="search">
-                <input type="search" id="search_bar"></input>
-                <button type="submit" id="search_button">
-                    <span className="material-symbols-outlined">
-                        search
-                    </span>
-                </button>
-            </li>
-            <li className="nav_link">
-                <a href="#"> <!--may have to add "tagindex:0" if the href is just a popup on the page and not an indie link-->
-                    Sign up
-                </a>
-            </li>
-            <li className="nav_link">
-                <a href="#">
-                    Log in
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div className="container">
-        <img src= "cropped_hands_puzzle.jpg" id="about_banner"/>
-        <div className="container2" id="about_opener">
-            <h1>About Us</h1>
-    </div>
-    <div id="about_container">
-        <div id="about_blurb">
-            <p id="about_quote">
-                "When I was a boy and I would see scary things in the news, my mother would say to me, 'Look for the helpers. You will always find people who are helping.'"
-            </p>
-            <p id="author_about_quote">
-                -Fred Rogers
-            </p>
-            <div id="about_blurb_grid">
-                <div id="about_grid_item_1">
-                    <p className="about_grid_accent">
-                        Dynamic updates
-                    </p>
-                    <p className="about_grid_statement">
-                         because the world never stops
-                    </p>
-                </div>
-                <div id="about_grid_item_2">
-                    <p className="about_grid_accent">
-                        400K+
-                    </p>
-                    <p className="about_grid_statement">
-                        vetted organizations
-                    </p> 
-                </div>
-                <div id="about_grid_item_3">
-                    <p className="about_grid_accent">
-                        Powered by
-                    </p>
-                    <p className="about_grid_statement">
-                        GlobalGiving and CharityNavigator
-                    </p>
-                </div>
+          </span>
+          |
+          <span className="trending_np_info_region">
+            <a href="#" className="trending_np_info_region_link">
+              Morocco
+            </a>
+          </span>
+          <div className="trending_np_info_proj_name">
+            <a href="#" className="trending_np_info_proj_link">
+              Morocco Earthquake Relief Fund
+            </a>
+          </div>
+          <div className="trending_np_info_org_name">
+            <a href="#" className="trending_np_info_org_link">
+              by GlobalGiving
+            </a>
+          </div>
+          <div className="trending_np_info_proj_blurb">
+            A powerful earthquake hit Morocco on Sept. 8, killing more than
+            2,800 people, injuring thousands more, and causing widespread
+            damage. Your donation to the Morocco Earthquake Relief Fund will
+            provide emergency relief and long-term support to affected
+            communities.
+          </div>
+          <div className="trending_np_info_goal">
+            <div className="goal_progress">
+              <div className="goal_progress_amt">$60</div>
+              raised of $600 goal
+              <div className="goal_thermometer">
+                <div className="goal_thermometer_percent" />
+              </div>
             </div>
+            <div className="goal_donate_button">
+              <button type="button" className="donate_proj_link">
+                DONATE
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
+      {/*THIS IS JUST PLACEHOLDER !!!!!*/}
+      <div className="trending_np">
+        {/*maybe make img a?*/}
+        <a className="trending_np_pic" href="#" />
+        <div className="trending_np_info">
+          <span className="trending_np_info_cat">
+            <a href="#" className="trending_np_info_cat_link">
+              Disaster Response
+            </a>
+          </span>
+          |
+          <span className="trending_np_info_region">
+            <a href="#" className="trending_np_info_region_link">
+              Morocco
+            </a>
+          </span>
+          <div className="trending_np_info_proj_name">
+            <a href="#" className="trending_np_info_proj_link">
+              Morocco Earthquake Relief Fund
+            </a>
+          </div>
+          <div className="trending_np_info_org_name">
+            <a href="#" className="trending_np_info_org_link">
+              by GlobalGiving
+            </a>
+          </div>
+          <div className="trending_np_info_proj_blurb">
+            A powerful earthquake hit Morocco on Sept. 8, killing more than
+            2,800 people, injuring thousands more, and causing widespread
+            damage. Your donation to the Morocco Earthquake Relief Fund will
+            provide emergency relief and long-term support to affected
+            communities.
+          </div>
+          <div className="trending_np_info_goal">
+            <div className="goal_progress">
+              <div className="goal_progress_amt">$60</div>
+              raised of $600 goal
+              <div className="goal_thermometer">
+                <div className="goal_thermometer_percent" />
+              </div>
+            </div>
+            <div className="goal_donate_button">
+              <button type="button" className="donate_proj_link">
+                DONATE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="trending_np">
+        {/*maybe make img a?*/}
+        <a className="trending_np_pic" href="#" />
+        <div className="trending_np_info">
+          <span className="trending_np_info_cat">
+            <a href="#" className="trending_np_info_cat_link">
+              Disaster Response
+            </a>
+          </span>
+          |
+          <span className="trending_np_info_region">
+            <a href="#" className="trending_np_info_region_link">
+              Morocco
+            </a>
+          </span>
+          <div className="trending_np_info_proj_name">
+            <a href="#" className="trending_np_info_proj_link">
+              Morocco Earthquake Relief Fund
+            </a>
+          </div>
+          <div className="trending_np_info_org_name">
+            <a href="#" className="trending_np_info_org_link">
+              by GlobalGiving
+            </a>
+          </div>
+          <div className="trending_np_info_proj_blurb">
+            A powerful earthquake hit Morocco on Sept. 8, killing more than
+            2,800 people, injuring thousands more, and causing widespread
+            damage. Your donation to the Morocco Earthquake Relief Fund will
+            provide emergency relief and long-term support to affected
+            communities.
+          </div>
+          <div className="trending_np_info_goal">
+            <div className="goal_progress">
+              <div className="goal_progress_amt">$60</div>
+              raised of $600 goal
+              <div className="goal_thermometer">
+                <div className="goal_thermometer_percent" />
+              </div>
+            </div>
+            <div className="goal_donate_button">
+              <button type="button" className="donate_proj_link">
+                DONATE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*THIS IS JUST PLACEHOLDER !!!!!*/}
     </div>
-    <div id="about_article">
-        <div id="para_1_about_article">
-            Welcome to The News Trend-Based Nonprofit Index, your trusted source for comprehensive insights into charitable organizations focusing on humanist topics in the news. At our heart, we are a beacon of hope and compassion, meticulously curating information on nonprofits responding to the pressing challenges of our time, including natural disasters, acts of terrorism, and human rights issues. Our platform is a testament to the dedication of one individual, passionate about making a difference in the world.
+  </div>
+  <div id="more_button">
+    <button type="button" id="load_more">
+      More
+    </button>
+  </div>
+  <div id="next_tools_grid_container">
+    <div id="title_tools_container">Explore</div>
+    <div id="tools_links_container">
+      <span className="tools_links_buttons" id="left_tool_link">
+        <div className="box_img">
+          <a href="#">
+            <img
+              src="charity_water_child_smile.jpg"
+              className="img_tools_links"
+            />
+          </a>
         </div>
-        <div id="para_2_about_article">
-            In a landscape often cluttered with information, our founder envisioned a singular platform where users could easily navigate the complex realm of charitable organizations. The driving force behind our initiative is the belief in the power of humanism<code>&#8212;</code>the understanding that empathy, reason, and ethics are the foundation of positive change. With a keen eye on global events, we provide in-depth analyses, transparent evaluations, and up-to-date information on nonprofits, enabling you to make informed decisions about your charitable contributions. At The Index, we bridge the gap between those who want to help and the organizations making a real impact. Join us on this philanthropic journey, where every click contributes to a better world.
-        </div>
-    </div>
-    <div id="search_cta">
-        <a href="#" id="button_search_link">
-            Find a cause
+        <a href="#donorbasicslink" className="box_links">
+          Donor basics{" "}
+          {/*"A page abt how this is just an encyclopedia of sorts--I am not here to take your money/there are no affiliate links/never any tracking + a link to globalgiving + charity navigator's safety and rules "*/}
         </a>
+      </span>
+      <span className="tools_links_buttons" id="mid_tool_link">
+        <div className="box_img">
+          <a href="#">
+            <img src="outdoor_family.jpg" className="img_tools_links" />
+          </a>
+        </div>
+        <a href="#safetylink" className="box_links">
+          Safety{" "}
+          {/*REITERATE THAT THIS IS NOT GOING TO TAKE UR MONEY. Incl link to how to not get scammed*/}
+        </a>
+      </span>
+      <span className="tools_links_buttons" id="right_tool_link">
+        <div className="box_img">
+          <a href="#">
+            <img src="medical_outreach.jpeg" className="img_tools_links" />
+          </a>
+        </div>
+        <a href="#searchlink" className="box_links">
+          Search
+        </a>
+      </span>
     </div>
-    <div id="about_carousel">
-        <div className="ab_carousel_items" id="carousel_1">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
-        <div className="ab_carousel_items" id="carousel_2">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
-        <div className="ab_carousel_items" id="carousel_3">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
-        <div className="ab_carousel_items" id="carousel_4">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
-        <div className="ab_carousel_items" id="carousel_5">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
-        <div className="ab_carousel_items" id="carousel_6">
-            <a href="#some_fund">
-                <img src="#some_charity_img">
-            </a>
-            <div className="carousel_txt">
-                <div>
-                    <a href="#search_link_for_geographical" className="carousel_geo_link">
-                        Country
-                    </a>
-                </div>
-                <div>
-                    <a href="#link_to_actual_charity_pg" className="carousel_project_link">
-                        This is the name of the project
-                    </a>
-                </div>
-                <div className="hover_txt_carousel">
-
-                </div>
-            </div>
-        </div>
+  </div>
+  <footer>
+    <div className="foot_col" id="site_info">
+      <img
+        src="transparent_index_logo.png"
+        id="logo_transparent"
+        alt="Nonprofit Index logo"
+      />
+      <p id="footer_tagline">
+        <i>Empowering the informed.</i>
+      </p>
     </div>
+    <div className="foot_col lower_foot_col" id="misc_links">
+      <div className="misc_title">About</div>
+      <ul className="footer_nav_list">
+        <li>
+          <a className="misc_nav_links" href="/about.html">
+            About us
+          </a>
+        </li>
+        <li>
+          <a className="misc_nav_links" href="#">
+            Safety statement
+          </a>
+        </li>
+        <li>
+          <a className="misc_nav_links" href="#">
+            Developing
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div className="foot_col lower_foot_col" id="accounts">
+      <div className="misc_title">My account</div>
+      <ul className="footer_nav_list">
+        <li>
+          <a className="misc_nav_links" href="#">
+            Log in
+          </a>
+        </li>
+        <li>
+          <a className="misc_nav_links" href="#">
+            Sign up
+          </a>
+        </li>
+        <li>
+          <a className="misc_nav_links" href="#">
+            My causes
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div className="foot_col lower_foot_col" id="contact">
+      <div className="misc_title">Contact</div>
+      <ul className="footer_nav_list">
+        <li>
+          <a className="misc_nav_links" href="#">
+            Email form
+          </a>
+        </li>
+        <li>
+          <a className="misc_nav_links" href="#">
+            Github
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="copyright">
+      Copyright © 2023 Alexis Abramson |
+      <a id="repo_home_link" href="#insertgithubreadme">
+        README.md
+      </a>
+    </div>
+  </footer>
+</>
 
-    <footer>
-        <div className="foot_col" id="site_info">
-            <img src="transparent_index_logo.png" id="logo_transparent" alt="Nonprofit Index logo">
-            <p id="footer_tagline"><i>Empowering the informed.</i></p>
-            
-        </div>
-        <div className="foot_col lower_foot_col" id="misc_links">
-            <div className="misc_title">
-                About
-            </div>
-            <ul className="footer_nav_list">
-                <li>
-                    <a className="misc_nav_links" href="#">About us</a>
-                </li>
-                <li>
-                    <a className="misc_nav_links" href="#">Safety statement</a>
-                </li>
-                <li>
-                    <a className="misc_nav_links" href="#">Developing</a>
-                </li>
-            </ul>
-        </div>
-        <div className="foot_col lower_foot_col" id="accounts">
-            <div className="misc_title">
-                My account
-            </div>
-            <ul className="footer_nav_list">
-                <li>
-                    <a className="misc_nav_links" href="#">Log in</a>
-                </li>
-                <li>
-                    <a className="misc_nav_links" href="#">Sign up</a>
-                </li>
-                <li>
-                    <a className="misc_nav_links" href="#">My causes</a>
-                </li>
-            </ul>
-        </div>
-        <div className="foot_col lower_foot_col" id="contact">
-            <div className="misc_title">
-                Contact
-            </div>
-            <ul className="footer_nav_list">
-                <li>
-                    <a className="misc_nav_links" href="#">Email form</a>
-                </li>
-                <li>
-                    <a className="misc_nav_links" href="#">Github</a>
-                </li>
-            </ul>
-        </div>
-        <div id="copyright">
-            Copyright &copy; 2023 Alexis Abramson
-            |
-            <a id="repo_home_link" href="#insertgithubreadme">README.md</a>
-        </div>
-    </footer>
-    </>
         )
 }

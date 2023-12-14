@@ -48,3 +48,31 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+
+#home_gallery {
+  height: 50vh;
+  width: 60vw;
+  margin: auto;
+}
+
+.container_pg_layout_01 {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.left_gallery_layout_01 {
+  grid-column-start: 1;
+}
+
+.article_layout_01 {
+  grid-column-start: 2;
+}
+
+.article_title_layout_01 {
+  text-align: center;
+  
+}
+
+.right_gallery_layout_01 {
+  grid-column-start: 3;
+}

@@ -19,10 +19,22 @@ export default function Home() {
       <div id = "container">
         <Navbar/>
         <div id = "site_content">
-          <div id = "gallery">
-
+          <div id = "home_gallery">
+            /** container for api info */
           </div>
-            <h1>Welcome to the index.</h1>
+          <div className = "container_pg_layout_01"> 
+            <div className = "left_gallery_layout_01">
+              
+            </div>
+            <div className = "article_layout_01">
+              <h1 className = "article_title_layout_01">
+                Welcome to The News Trend-Based Nonprofit Index.
+              </h1>
+            </div>
+            <div className = "right_gallery_layout_01">
+              /** container for api info */
+            </div>
+          </div>
         </div>
       </div>
     </>

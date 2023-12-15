@@ -17,7 +17,10 @@ export default function NavBar () {
                     </div>
                     <div className = "content_link">
                         <Link href = "./nonprofits/nonprofits_page">Nonprofits</Link>
-                    </div> 
+                    </div>
+                    <div className = "content_link">
+                        <Link href = "./search/search_page">Search</Link>
+                    </div>
                 </div>
                 <div style={{position: "fixed", bottom: "0"}}>
                     <div className = "content_link">

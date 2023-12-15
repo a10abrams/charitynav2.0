@@ -20,7 +20,7 @@ export default function Home() {
         <Navbar/>
         <div id = "site_content">
           <div id = "home_gallery">
-            /** container for api info */
+            {/* container for api info */}
           </div>
           <div className = "container_pg_layout_01"> 
             <div className = "left_gallery_layout_01">
@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
             </div>
             <div className = "right_gallery_layout_01">
-              /** container for api info */
+              {/* container for api info */}
             </div>
           </div>
         </div>

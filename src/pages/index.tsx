@@ -25,7 +25,6 @@ export default function Home() {
             <div className = "container_pg_layout_01"> 
               <div className = "left_gallery_layout_01">
               {/* container for api info  */}
-              
               </div>
               <div className = "article_layout_01">
                 <h1 className = "article_title_layout_01">
@@ -42,8 +41,7 @@ export default function Home() {
                 </p>
               </div>
               <div className = "right_gallery_layout_01">
-                {/* container for api info */}
-                
+                {/* container for api info */}   
               </div>
             </div>
           </div>

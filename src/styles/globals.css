@@ -61,7 +61,7 @@ a:hover {
   height: 50vh;
   width: 60vw;
   margin: 2em auto;
-  background-color: yellowgreen;
+  
 }
 
 .container_pg_layout_01 {
@@ -71,7 +71,7 @@ a:hover {
 
 .left_gallery_layout_01 {
   grid-column-start: 1;
-  background-color: yellowgreen;
+  
 }
 
 .article_layout_01 {
@@ -89,7 +89,7 @@ a:hover {
 
 .right_gallery_layout_01 {
   grid-column-start: 3;
-  background-color: yellowgreen;
+ 
 }
 
 

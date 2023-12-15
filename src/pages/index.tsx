@@ -31,8 +31,7 @@ export default function Home() {
                   Welcome to The News Trend-Based Nonprofit Index.
                 </h1>
                 <p className = "article_content_layout_01" id = "home_blurb">
-                  Empowering causes isn't just a wish; it's a choice we make. If you're
-                  uncertain about where to begin, start here! Dive into the heart of current
+                  Empowering causes isn&apos;t just a wish; it&apos;s a choice we make. If you&apos;re uncertain about where to begin, start here! Dive into the heart of current
                   events and discover the humans making a difference. Your click can be the
                   catalyst for change -&#160;
                   <Link href="#" id="search_inline">

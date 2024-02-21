@@ -9,7 +9,7 @@ import React, { useEffect, useState} from 'react'
 import Navbar from '../components/navigation'
 import SupportBanner from '../components/support_banner'
 import Footer from '../components/footer'
-import CarouselComponent from '@/components/carousel_component'
+import CarouselComponent from '../components/carousel_component'
 
 const Home = () => {
   const { galleryPhotos } = useGalleryPhotos(5);

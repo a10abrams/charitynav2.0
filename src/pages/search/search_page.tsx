@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import NavBar from '../navigation'
+import NavBar from '../components/navigation'
 
 export default function Search() {
     return (

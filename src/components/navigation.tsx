@@ -13,13 +13,16 @@ export default function NavBar () {
                     /> */}
                 <div style={{position: "fixed", top: "0"}}>
                     <div className = "content_link">
-                        <Link href = "./about/about_page">About Us</Link>
+                        <Link href = "/">Home placeholder</Link>
                     </div>
                     <div className = "content_link">
-                        <Link href = "./nonprofits/nonprofits_page">Nonprofits</Link>
+                        <Link href = "/about/about_page">About Us</Link>
                     </div>
                     <div className = "content_link">
-                        <Link href = "./search/search_page">Search</Link>
+                        <Link href = "/nonprofits/nonprofits_page">Nonprofits</Link>
+                    </div> 
+                    <div className = "content_link">
+                        <Link href = "/search/search_page">Search</Link>
                     </div>
                 </div>
                 <div style={{position: "fixed", bottom: "0"}}>

@@ -7,10 +7,6 @@ export default function NavBar () {
         <>
         <div id = "nav_container">
             <nav id = "left_aligned_bar">
-                {/*<Image
-                    src = "#"
-                    alt = "Nonprofit Index Logo"
-                    /> */}
                 <div style={{position: "fixed", top: "0"}}>
                     <div className = "content_link">
                         <Link href = "/">Home placeholder</Link>

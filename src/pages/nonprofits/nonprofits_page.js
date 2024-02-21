@@ -15,7 +15,6 @@ export default function Nonprofits() {
             </div>
             <div className = "container_pg_layout_01"> 
               <div className = "left_gallery_layout_01">
-              {/* container for api info  */}
               
               </div>
               <div className = "article_layout_01">

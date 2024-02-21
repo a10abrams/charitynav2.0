@@ -24,7 +24,7 @@ const Home = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div id = "container">
-          <Navbar/>
+          <NavBar/>
           <SupportBanner/>
           <div id = "site_content">
             <div id = "home_gallery">

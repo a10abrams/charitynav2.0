@@ -1,5 +1,5 @@
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
 
@@ -8,7 +8,7 @@ export const useGlobalGivingData = () => {
     const [allProjectsXML, setAllProjectsXML] = useState('');
 
     // Fetch all projects XML data
-    useEffect (() => {
+    useEffect(() => {
         const fetchAllProjectsXML = async () => {
             try {
                 const response = await axios.get(
@@ -22,37 +22,36 @@ export const useGlobalGivingData = () => {
                 );
                 setAllProjectsXML(response.data);
             } catch (error) {
-                console.error ('Error downloading all projects XML:', error);
+                console.error('Error downloading all projects XML:', error);
                 alert('Oh no! An error has occurred!');
             }
         };
-        
+
         fetchAllProjectsXML();
     }, []);
 
     // Parse XML data effect
-    useEffect (() => {
+    useEffect(() => {
         const parseXMLData = () => {
             try {
                 const parser = new DOMParser();
-                const xmlDoc = parseFromString(allProjectsXML, 'application/xml');
+                const xmlDoc = parser.parseFromString(allProjectsXML, 'application/xml');
 
                 console.log('Parsed XML data:', xmlDoc);
                 // set state with parsed data?
             } catch (error) {
                 console.log('Error parsing XML data:', error);
-                alert('Oh no! An error has occured!');
+                alert('Oh no! An error has occurred!');
             }
         };
 
         if (allProjectsXML) {
             parseXMLData();
         }
-    }, [allProjectsXML])
-};
+    }, [allProjectsXML]);
 
-// Fetch random gallery photos
-   export const getRandomGalleryPhotos = async (count) => {
+    // Fetch random gallery photos
+    export const getRandomGalleryPhotos = async (count) => {
         try {
             const response = await axios.get(
                 'https://api.globalgiving.org/api/public/projectservice/projects',
@@ -66,7 +65,7 @@ export const useGlobalGivingData = () => {
                     },
                 }
             );
-            
+
             const projects = response.data.projects;
             const randomProjects = projects.sort(() => 0.5 - Math.random()).slice(0, count);
 
@@ -75,7 +74,7 @@ export const useGlobalGivingData = () => {
                     `https://api.globalgiving.org/api/public/projectservice/projects/${project.id}/imagegallery`,
                     {
                         headers: {
-                            Authorization: API_KEY  ,
+                            Authorization: API_KEY,
                         },
                         params: {
                             count: 1, // CHANGE PLZ THIS IS JUST FOR TESTING
@@ -85,11 +84,14 @@ export const useGlobalGivingData = () => {
 
                 return projectResponse.data.photos[0];
             });
-        
-        const photos = await Promise.all(photosPromises);
-        return photos;
+
+            const photos = await Promise.all(photosPromises);
+            return photos;
         } catch (error) {
             console.error('Error fetching random gallery photos:', error);
             throw error;
         }
     };
+
+    return { getRandomGalleryPhotos };
+};

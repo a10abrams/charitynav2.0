@@ -48,10 +48,11 @@ export const useGlobalGivingData = () => {
         if (allProjectsXML) {
             parseXMLData();
         }
-    }, [allProjectsXML]);
+    }, [allProjectsXML])
+};
 
-    // Fetch random gallery photos
-    const getRandomGalleryPhotos = async (count) => {
+// Fetch random gallery photos
+   export const getRandomGalleryPhotos = async (count) => {
         try {
             const response = await axios.get(
                 'https://api.globalgiving.org/api/public/projectservice/projects',
@@ -92,6 +93,3 @@ export const useGlobalGivingData = () => {
             throw error;
         }
     };
-
-    return { getRandomGalleryPhotos };
-};

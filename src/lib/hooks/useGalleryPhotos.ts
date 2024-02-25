@@ -1,5 +1,5 @@
 import {useEffect , useState } from 'react';
-import { useGlobalGivingData } from '../../pages/api/api';
+import { useGlobalGivingData } from '../api';
 
 interface GalleryPhotosResult {
     galleryPhotos: any[];
@@ -11,16 +11,21 @@ export const useGalleryPhotos = (count: number): GalleryPhotosResult => {
     
     useEffect(() => {
         const fetchGalleryPhotos = async () => {
-            try{
-                const photos = await getRandomGalleryPhotos(5);
-                setGalleryPhotos(photos);
+            try {
+                const response = await fetch('/api/get_gallery_photos');
+                if (response.ok) {
+                    const photos = await response.json();
+                    setGalleryPhotos(photos);
+                } else {
+                    console.error('Error fetching gallery photos:', response.status)
+                }
             } catch (error) {
                 console.error('Error fetching gallery photos:', error);
             }
         };
 
         fetchGalleryPhotos();
-    }, [getRandomGalleryPhotos]);
+    }, []);
 
     return {galleryPhotos};
 };

@@ -95,5 +95,3 @@ export const useGlobalGivingData = () => {
 
     return { getRandomGalleryPhotos };
 };
-    return { getRandomGalleryPhotos };
-};

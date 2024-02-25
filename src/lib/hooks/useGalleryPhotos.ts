@@ -7,7 +7,7 @@ interface GalleryPhotosResult {
 
 export const useGalleryPhotos = (count: number): GalleryPhotosResult => {
     const [galleryPhotos, setGalleryPhotos] = useState<any[]>([]);
-    
+
     useEffect(() => {
         const fetchGalleryPhotos = async () => {
             try {
@@ -19,7 +19,7 @@ export const useGalleryPhotos = (count: number): GalleryPhotosResult => {
         };
 
         fetchGalleryPhotos();
-    }, [count]); // Include count in the dependency array if it's used inside the useEffect
+    }, [count]);
 
     return { galleryPhotos };
 };

@@ -7,7 +7,7 @@ const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
 export const getRandomGalleryPhotos = async (count, parsedXMLData) => {
     try {
         const response = await axios.get(
-            'https://api.globalgiving.org/api/public/projectservice/projects',
+            `https://api.globalgiving.org/api/public/projectservice/themes/edu/projects?api_key=${API_KEY}`,
             {
                 headers: {
                     Authorization: API_KEY,
@@ -24,7 +24,7 @@ export const getRandomGalleryPhotos = async (count, parsedXMLData) => {
 
         const photosPromises = randomProjects.map(async (project) => {
             const projectResponse = await axios.get(
-                `https://api.globalgiving.org/api/public/projectservice/themes/{democ, disaster, gender, justice, lgbtq}/projects`,
+                `https://api.globalgiving.org/api/public/projectservice/themes/edu/projects?api_key=${API_KEY}`,
                 {
                     headers: {
                          Authorization: API_KEY,

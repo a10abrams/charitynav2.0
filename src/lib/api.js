@@ -24,7 +24,7 @@ export const getRandomGalleryPhotos = async (count, parsedXMLData) => {
 
         const photosPromises = randomProjects.map(async (project) => {
             const projectResponse = await axios.get(
-                `https://api.globalgiving.org/api/public/projectservice/projects/${project.id}/imagegallery`,
+                `https://api.globalgiving.org/api/public/projectservice/themes/{democ, disaster, gender, justice, lgbtq}/projects`,
                 {
                     headers: {
                          Authorization: API_KEY,

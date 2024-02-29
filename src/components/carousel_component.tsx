@@ -1,8 +1,5 @@
 import React from 'react'
-
-interface CarouselComponentProps {
-    photos: any[];
-}
+import { CarouselComponentProps } from '../types/interfaces';
 
 const CarouselComponent: React.FC<CarouselComponentProps> = ({ photos }) => {
     return (

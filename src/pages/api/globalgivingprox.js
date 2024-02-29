@@ -10,6 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         Authorization: API_KEY,
       },
     });
+
+    res.status(response.status).json(response.data);
   } catch (error) {
     res.status(error.response?.status || 500).json({ error: 'Internal Server Error' });
   }

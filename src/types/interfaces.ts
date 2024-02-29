@@ -44,6 +44,92 @@ interface Video {
   url: string;
 }
 
+interface GlobalGivingProject {
+  active: boolean;
+  activities: string;
+  additionalDocumentation?: string;
+  approvedDate: string; // Assuming string for simplicity, adjust if a specific date format is used
+  contactAddress: string;
+  contactAddress2?: string;
+  contactCity: string;
+  contactCountry: string;
+  contactName: string;
+  contactPostal: string;
+  contactState: string;
+  contactTitle: string;
+  contactUrl: string;
+  countries: {
+    iso3166CountryCode: string;
+    name: string;
+    country: string;
+  }[];
+  country: string;
+  iso3166CountryCode: string;
+  funding: number; // Assuming a number for simplicity
+  goal: number; // Assuming a number for simplicity
+  id: number;
+  imageGallerySize: number;
+  imageLink: string;
+  image?: {
+    id: number;
+    title?: string;
+    imagelink: {
+      size: string;
+      url: string;
+    }[];
+  };
+  latitude?: number;
+  longTermImpact: string;
+  longitude?: number;
+  need: string;
+  notice?: string;
+  numberOfDonations: number;
+  organization?: {
+    activeProjects: number;
+    addressLine1?: string;
+    addressLine2?: string;
+    city?: string;
+    country?: string;
+    ein?: string;
+    id: number;
+    iso3166CountryCode?: string;
+    logoUrl?: string;
+    mission: string;
+    name: string;
+    postal?: string;
+    state?: string;
+    totalProjects: number;
+    url?: string;
+    themes?: string[];
+    countries?: string[];
+  };
+  progressReportLink: string;
+  projectLink: string;
+  region: string;
+  remaining: number; // Number for simplicity
+  status: string;
+  summary: string;
+  themes: {
+    id: string;
+    name: string;
+    themeName: string;
+    title: string;
+    type: string;
+  }[];
+  type: string;
+  donationOptions?: {
+    donationOption: {
+      amount: number; // Number for simplicity
+      description: string;
+    };
+  }[];
+  videos?: {
+    video: {
+      url: string;
+    };
+  }[];
+}
+
 interface Project {
   numberFound: number;
   hasNext?: boolean;
@@ -91,6 +177,7 @@ interface Project {
   type: string;
   donationOptions: DonationOption[];
   videos: Video[];
+  globalGivingProject: GlobalGivingProject; // Allows access to that interface when detailed info is needed
 }
 
 export interface Theme {

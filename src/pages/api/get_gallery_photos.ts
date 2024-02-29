@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const apiUrl = '/api/globalgiving' + req.url;
 
     // Use your server-side proxy to fetch data from GlobalGiving
-    const response = await axios.get(apiUrl);
+    const response = await Axios.get(apiUrl);
 
     res.status(response.status).json(response.data);
   } catch (error: any) {

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Project } from '../types/interfaces';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
-const apiUrl = '/api/globalgivingprox;
+const apiUrl = '/api/globalgivingprox';
 
 // Fetch random gallery photos
 export const getRandomGalleryPhotos = async (count: number): Promise<any[]> => {

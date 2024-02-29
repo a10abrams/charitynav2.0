@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
+import Axios, { AxiosError } from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const response = await axios.get(apiUrl);
 
     res.status(response.status).json(response.data);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error fetching gallery photos:', error);
-    res.status(error.response?.status || 500).json({ error: 'Internal Server Error' });
+    res.status((error as AxiosError)?.response?.status || 500).json({ error: 'Internal Server Error' });
   }
 }

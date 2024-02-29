@@ -1,21 +1,21 @@
-interface ImageLink {
+export interface ImageLink {
   size: string;
   url: string;
 }
 
-interface Image {
+export interface Image {
   id: string;
   imagelink: ImageLink[];
   title?: string;
 }
 
-interface Country {
+export interface Country {
   iso3166CountryCode: string;
   name: string;
   country: string;
 }
 
-interface Organization {
+export interface Organization {
   activeProjects: number;
   addressLine1?: string;
   addressLine2?: string;
@@ -35,16 +35,16 @@ interface Organization {
   countries?: string[];
 }
 
-interface DonationOption {
+export interface DonationOption {
   amount: number;
   description: string;
 }
 
-interface Video {
+export interface Video {
   url: string;
 }
 
-interface GlobalGivingProject {
+export interface GlobalGivingProject {
   active: boolean;
   activities: string;
   additionalDocumentation?: string;
@@ -130,7 +130,7 @@ interface GlobalGivingProject {
   }[];
 }
 
-interface Project {
+export interface Project {
   numberFound: number;
   hasNext?: boolean;
   nextProjectId?: number;
@@ -189,7 +189,7 @@ export interface ThemesResponse {
   themes: Theme[];
 }
 
-interface GetAllProjectsResponse {
+export interface GetAllProjectsResponse {
   projects: Project[];
 }
 

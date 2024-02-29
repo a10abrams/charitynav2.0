@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Project } from '../types/interfaces';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
 
@@ -23,7 +24,7 @@ export const getRandomGalleryPhotos = async (count: number): Promise<any[]> => {
     const projects = response.data.projects;
     const randomProjects = projects.sort(() => 0.5 - Math.random()).slice(0, count);
 
-    const photosPromises = randomProjects.map(async (project) => {
+    const photosPromises = randomProjects.map(async (project: Project) => {
       const projectResponse = await axios.get(
         `https://api.globalgiving.org/api/public/projectservice/themes/edu/projects`,
         {

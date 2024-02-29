@@ -8,7 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     // Modified to cast `req.query.count` to a number
     const count = typeof req.query.count === 'string' ? parseInt(req.query.count, 10) : req.query.count || 5;
-    const photos = await getRandomGalleryPhotos(count);
+    // Modified for type assertion on `count`
+    const photos = await getRandomGalleryPhotos(count as number);
 
     res.status(200).json(photos);
   } catch (error) {

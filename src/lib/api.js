@@ -30,7 +30,7 @@ export const getRandomGalleryPhotos = async (count, parsedXMLData) => {
                          Authorization: API_KEY,
                     },
                     params: {
-                        count: 1, // CHANGE PLZ THIS IS JUST FOR TESTING
+                        count: 10, // CHANGE PLZ THIS IS JUST FOR TESTING
                     },
                 }
             );
@@ -66,7 +66,6 @@ export const useGlobalGivingData = () => {
                 setAllProjectsXML(response.data);
             } catch (error) {
                 console.error ('Error downloading all projects XML:', error);
-                alert('Oh no! An error has occurred!');
             }
         };
         
@@ -84,7 +83,6 @@ export const useGlobalGivingData = () => {
                 // set state with parsed data?
             } catch (error) {
                 console.log('Error parsing XML data:', error);
-                alert('Oh no! An error has occurred!');
             }
         };
 

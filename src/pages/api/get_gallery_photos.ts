@@ -1,19 +1,17 @@
-import { getRandomGalleryPhotos } from '../../lib/api';
 import { NextApiRequest, NextApiResponse } from 'next';
-import Axios from 'axios';
-
-const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
+import axios from 'axios';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    // Modified to cast `req.query.count` to a number
-    const count = typeof req.query.count === 'string' ? parseInt(req.query.count, 10) : req.query.count || 5;
-    // Modified for type assertion on `count`
-    const photos = await getRandomGalleryPhotos(count as number);
+    // Update the URL to use your server-side proxy route
+    const apiUrl = '/api/globalgiving' + req.url;
 
-    res.status(200).json(photos);
+    // Use your server-side proxy to fetch data from GlobalGiving
+    const response = await axios.get(apiUrl);
+
+    res.status(response.status).json(response.data);
   } catch (error) {
     console.error('Error fetching gallery photos:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(error.response?.status || 500).json({ error: 'Internal Server Error' });
   }
 }

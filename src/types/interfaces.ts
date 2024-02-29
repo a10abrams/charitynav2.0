@@ -107,3 +107,8 @@ interface GetAllProjectsResponse {
 }
 
 export default GetAllProjectsResponse;
+
+
+export interface GalleryPhotosResult {
+    galleryPhotos: any[];
+}

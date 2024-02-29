@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import NavBar from '../../components/navigation'
+import Link from 'next/link';
+import NavBar from '../../components/navigation';
 import SupportBanner from '@/components/support_banner';
-import Footer from '../../components/footer'
+import Footer from '../../components/footer';
 
 export default function Search() {
     return (

@@ -112,3 +112,8 @@ export default GetAllProjectsResponse;
 export interface GalleryPhotosResult {
     galleryPhotos: any[];
 }
+
+export interface CarouselComponentProps {
+    photos: any[];
+}
+

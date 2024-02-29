@@ -1,6 +1,6 @@
 import { getRandomGalleryPhotos } from '../api';
 import { useState, useEffect } from 'react';
-import { GalleryPhotosResult } from '../lib/interfaces';
+import { GalleryPhotosResult } from '../types/interfaces';
 
 export const useGalleryPhotos = (count: number): GalleryPhotosResult => {
     const [galleryPhotos, setGalleryPhotos] = useState<any[]>([]);

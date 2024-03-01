@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import { getRandomGalleryPhotos } from '../lib/api';
 import { useGalleryPhotos } from '../lib/hooks/useGalleryPhotos'
 import React, { useEffect, useState} from 'react'
 import NavBar from '../components/navigation'
@@ -12,6 +13,24 @@ import CarouselComponent from '../components/carousel_component'
 
 const Home = () => {
   const { galleryPhotos } = useGalleryPhotos(5);
+  
+  const themeIds = ['democ', 'disaster', 'lgbtq', 'justice', 'reproductive'];
+  
+  const count = 10;
+
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      try {
+        const photos = await getRandomGalleryPhotos(themeIds, count);
+        // Do something with the fetched photos
+        console.log(photos);
+      } catch (error) {
+        console.error('Error fetching gallery photos:', error);
+      }
+    };
+
+    fetchPhotos();
+  }, []); // Empty dependency array to fetch photos once when the component mounts
 
   // JSX structure for Home page
   return (

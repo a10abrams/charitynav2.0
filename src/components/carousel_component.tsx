@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { CarouselComponentProps } from '../types/interfaces';
 
 const CarouselComponent: React.FC<CarouselComponentProps> = ({ photos }) => {
@@ -14,7 +14,5 @@ const CarouselComponent: React.FC<CarouselComponentProps> = ({ photos }) => {
       </div>
    );
 };
-
-}
 
 export default CarouselComponent;

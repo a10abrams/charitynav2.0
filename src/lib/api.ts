@@ -2,12 +2,12 @@ import axios from 'axios';
 import { Project } from '../types/interfaces';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
-const apiUrl = getAbsoluteUrl('/api/globalgivingprox');
-
 const getAbsoluteUrl = (relativeUrl: string) =>
   process.env.NODE_ENV === 'production'
     ? 'https://charitynav-nine.vercel.app' + relativeUrl
     : 'http://localhost:3000' + relativeUrl;
+
+const apiUrl = getAbsoluteUrl('/api/globalgivingprox');
 
 // Fetch random gallery photos
 export const getRandomGalleryPhotos = async (themes: string[], count: number): Promise<any[]> => {

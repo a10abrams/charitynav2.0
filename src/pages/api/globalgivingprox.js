@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
   try {
     const response = await axios.get('https://api.globalgiving.org' + req.url, {
       headers: {

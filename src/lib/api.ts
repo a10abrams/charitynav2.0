@@ -37,7 +37,7 @@ export const getRandomGalleryPhotos = async (themes: string[], count: number): P
           Authorization: API_KEY,
         },
         params: {
-          themeId: {democ, disater, gender, rights, justice},  // Use all theme IDs
+          themeId: {themeIds},  // Use all theme IDs
           count: 10, // CHANGE FOR TESTING--10 IS MAX ACCORDING TO API DOCS
         },
       });

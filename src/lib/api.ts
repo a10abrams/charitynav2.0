@@ -22,7 +22,7 @@ export const getRandomGalleryPhotos = async (themes: string[], count: number): P
       params: {
         themeId: themeIds[0],  // Use the first theme ID
         page: 1,
-        per_page: count,
+        
       },
     });
 

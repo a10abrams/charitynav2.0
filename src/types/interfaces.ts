@@ -198,7 +198,7 @@ export default GetAllProjectsResponse;
 
 export interface GalleryPhotosResult {
     galleryPhotos: string;
-                  //any[];
+                  //I feel like this needs redefined to take photourls.
 }
 
 export interface CarouselComponentProps {

@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     // Allow the necessary headers
     res.setHeader('Access-Control-Allow-Headers', 'Authorization');
 
-    const response = await axios.get('https://api.globalgiving.org' + req.url, {
+    const response = await axios.get('https://api.globalgiving.org/api/public/projectservice/themes/{themeId}/projects?.api_key={$API_KEY}' + req.url, {
       headers: {
         Authorization: API_KEY,
       },

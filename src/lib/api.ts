@@ -7,6 +7,8 @@ const getAbsoluteUrl = (relativeUrl: string) =>
     ? 'https://charitynav-nine.vercel.app' + relativeUrl
     : 'http://localhost:3000' + relativeUrl;
 
+const themeIds = ['democ', 'disaster', 'lgbtq', 'justice', 'reproductive'];
+
 const apiUrl = getAbsoluteUrl('/api/globalgivingprox');
 
 // Fetch random gallery photos
@@ -18,7 +20,7 @@ export const getRandomGalleryPhotos = async (themes: string[], count: number): P
         Authorization: API_KEY,
       },
       params: {
-        themeId: themes[0],  // Use the first theme ID
+        themeId: themeIds[0],  // Use the first theme ID
         page: 1,
         per_page: count,
       },

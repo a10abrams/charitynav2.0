@@ -3,6 +3,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const API_KEY = process.env.NEXT_PUBLIC_GLOBAL_GIVING_API_KEY;
 
+const themeIds = ['democ', 'disaster', 'lgbtq', 'justice', 'reproductive'];
+
 export default async function handler(req, res) {
   try {
     // Allow requests from any origin
@@ -12,7 +14,7 @@ export default async function handler(req, res) {
     // Allow the necessary headers
     res.setHeader('Access-Control-Allow-Headers', 'Authorization');
 
-    const response = await axios.get('https://api.globalgiving.org/api/public/projectservice/themes/{themeId}/projects?.api_key={$API_KEY}' + req.url, {
+    const response = await axios.get('https://api.globalgiving.org/api/public/projectservice/themes/{$themeIds}/projects?.api_key={$API_KEY}' + req.url, {
       headers: {
         Authorization: API_KEY,
       },

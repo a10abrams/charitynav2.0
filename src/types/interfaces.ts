@@ -202,6 +202,6 @@ export interface GalleryPhotosResult {
 }
 
 export interface CarouselComponentProps {
-    photos: string[];
+    photos: string[] Array<{ url: string; description: string }>;
 }
 

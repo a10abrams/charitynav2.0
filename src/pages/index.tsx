@@ -50,7 +50,7 @@ const Home = () => {
             </div>
             <div className = "container_pg_layout_01"> 
               <div className = "left_gallery_layout_01">
-                <CarouselComponent photos={ useGalleryPhotos }/>
+                <CarouselComponent photos={ galleryPhotos }/>
               </div>
               <div className = "article_layout_01">
                 <h1 className = "article_title_layout_01">

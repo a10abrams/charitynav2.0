@@ -12,7 +12,7 @@ import Footer from '../components/footer'
 import CarouselComponent from '../components/carousel_component'
 
 const Home = () => {
-  const { galleryPhotos } = useGalleryPhotos(5);
+  const { galleryPhotos } = useGalleryPhotos(1); //change for testing
   
   const themeIds = ['democ', 'disaster', 'lgbtq', 'justice', 'reproductive'];
   

@@ -197,7 +197,7 @@ export default GetAllProjectsResponse;
 
 
 export interface GalleryPhotosResult {
-    galleryPhotos: string;
+    galleryPhotos: <image>;
                   //I feel like this needs redefined to take photourls.
 }
 
